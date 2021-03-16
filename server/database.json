@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "firstName": "Cam",
+      "lastName": "Cam",
+      "username": "cam",
+      "password": "123333333",
+      "isDeleting": false,
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "title": "Product001",
+      "description": "Lorem ipseum",
+      "cost": 100,
+      "quantity": 1000,
+      "star": 5,
+      "isDeleting": false,
+      "id": 1
+    },
+    {
+      "title": "Product002",
+      "description": "Lorem ipseum",
+      "cost": 50,
+      "quantity": 20,
+      "star": 2,
+      "isDeleting": false,
+      "id": 2
+    },
+    {
+      "title": "Product003",
+      "description": "Lorem ipseum",
+      "cost": 25,
+      "quantity": 5,
+      "star": 3.5,
+      "isDeleting": false,
+      "id": 3
+    }
+  ]
+}
