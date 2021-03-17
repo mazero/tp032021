@@ -23,7 +23,7 @@ export class ProductsAddEditComponent implements OnInit {
     this.id = this.router.snapshot.params['id'];
 
     this.form = this.formBuilder.group({
-      title:  ['', Validators.required ],
+      title:  ['', [Validators.required, Validators.minLength(3)]],
       description: ['', Validators.required],
       cost: [''],
       quantity: [''],
