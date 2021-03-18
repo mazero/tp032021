@@ -11,15 +11,6 @@
   ],
   "products": [
     {
-      "title": "Product001",
-      "description": "Lorem ipseum",
-      "cost": 100,
-      "quantity": 1000,
-      "star": 5,
-      "isDeleting": false,
-      "id": 1
-    },
-    {
       "title": "Product002",
       "description": "Lorem ipseum",
       "cost": 50,

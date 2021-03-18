@@ -9,6 +9,7 @@ import { IProduct } from '@app/@interfaces';
 })
 export class ProductsListComponent implements OnInit {
   public products: IProduct[] | null = null;
+  public termSearch: string = ''; 
 
   constructor(private productsService: ProductsService) { }
 

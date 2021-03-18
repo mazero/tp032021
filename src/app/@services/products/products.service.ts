@@ -9,6 +9,9 @@ const apiUrl = environment.apiUrl;
 const routes = {
     all: () => `${apiUrl}/products`,
     one: (id: number) => `${apiUrl}/products/${id}`,
+    create: () => `${apiUrl}/products`,
+    update: (id: number) => `${apiUrl}/products/${id}`,
+    delete: (id: number) => `${apiUrl}/products/${id}`,
 }
 
 @Injectable({
@@ -32,9 +35,24 @@ export class ProductsService {
     );
   }
 
-  public create() {}
+  public create(product: IProduct): Observable<IProduct> {
+    return this.http.post(routes.create(), product).pipe(
+      map((body: any) => body),
+      catchError(() => of('Error, could not create product.'))
+    )
+  }
 
-  public update() {}
+  public update(id: number, product: IProduct): Observable<IProduct> {
+    return this.http.put(routes.update(id), product).pipe(
+      map((body: any) => body),
+      catchError(() => of('Error, could not update product.'))
+    )
+  }
 
-  public delete() {}
+  public delete(id:number): Observable<IProduct> {
+    return this.http.delete(routes.delete(id)).pipe(
+      map((body: any) => body),
+      catchError(() => of('Error, could not delete product.'))
+    )
+  }
 }
