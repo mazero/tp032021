@@ -2,6 +2,7 @@ import { ProductsService } from '@services';
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-products-add-edit',
@@ -12,6 +13,7 @@ export class ProductsAddEditComponent implements OnInit {
   public form: FormGroup;
   public id: number;
   public submitted: boolean = false;
+  public subscription: Subscription
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -31,7 +33,7 @@ export class ProductsAddEditComponent implements OnInit {
       isDeleting: false
     })
 
-    this.productService.getById(this.id)
+   this.productService.getById(this.id)
         .subscribe(product => this.form.patchValue(product))
   }
 
@@ -41,5 +43,4 @@ export class ProductsAddEditComponent implements OnInit {
     this.submitted = true;
     console.log(this.form.value);
   }
-
 }
