@@ -1,0 +1,17 @@
+div {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background: url('/assets/icon-star-empty.svg');
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+
+    &.filled {
+        background: url('/assets/icon-star-filled.svg');     
+    }
+}

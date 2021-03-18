@@ -20,8 +20,7 @@
             <td>{{product.cost}}</td>
             <td>{{product.quantity}}</td>
             <td>
-                {{ product.star }}
-                <app-star></app-star>
+                <app-star [(rating)]="product.star"></app-star>
             </td>
             <td>
                 <a routerLink="edit/{{product.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
