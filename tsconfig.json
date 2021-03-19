@@ -11,6 +11,8 @@
       "@services/*": ["src/app/@sercices/*"],
       "@shared": ["src/app/@shared"],
       "@shared/*": ["src/app/@shared/*"],
+      "@helpers": ["src/app/@helpers"],
+      "@helpers/*": ["src/app/@helpers/*"],
       "@env/*": ["src/environments/*"]
     },
     "outDir": "./dist/out-tsc",
